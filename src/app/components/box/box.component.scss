@@ -1,0 +1,23 @@
+
+
+@mixin box($url){
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.empty-box {
+  @include box("../../../assets/images/empty.png")
+
+}
+
+.zero-box {
+  @include box("../../../assets/images/cero.png")
+
+}
+
+.x-box {
+  @include box("../../../assets/images/cross.png")
+
+}

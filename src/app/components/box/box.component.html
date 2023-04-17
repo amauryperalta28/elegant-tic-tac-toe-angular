@@ -1,0 +1,12 @@
+<div
+
+  [id]="id"
+
+  [class]="
+    content === 'X'
+      ? 'empty-box ' + borderRadiusClass + ' x-box'
+      : content === '0'
+      ? 'empty-box ' + borderRadiusClass + ' zero-box'
+      : 'empty-box ' + borderRadiusClass
+  "
+></div>
