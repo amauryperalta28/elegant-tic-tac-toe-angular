@@ -6,6 +6,7 @@
       [y]="box.y"
       [content]="box.content"
       [borderRadiusClass]="box.borderRadiusClass"
+      (onBoxClick)="registerMove(box.x, box.y)"
     ></app-box>
   </div>
 </div>

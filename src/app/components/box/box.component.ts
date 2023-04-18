@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-box',
@@ -11,15 +11,16 @@ export class BoxComponent implements OnInit {
   @Input() y: number = 0;
   @Input() content: string = ''
   @Input() borderRadiusClass = '';
+  @Output() onBoxClick: EventEmitter<boolean> = new EventEmitter<boolean>;
 
   id: string = '';
 
-  constructor() {
-
-  }
-
   ngOnInit(): void {
     this.id = `${this.x}_${this.y}`;
+  }
+
+  notifyBoxWasClicked(): void {
+    this.onBoxClick.emit(true);
   }
 
 

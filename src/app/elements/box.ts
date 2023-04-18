@@ -1,8 +1,9 @@
 export class Box {
   content: string = '';
+  id: string = '';
 
   constructor(public x: number, public y: number, public borderRadiusClass: string = '') {
-
+    this.id = `${this.x}_${this.y}`;
   }
 
   setCross() {
@@ -16,10 +17,6 @@ export class Box {
 
   getContent() {
     return this.content;
-  }
-
-  getId(){
-    return `${this.x}_${this.y}`;
   }
 
 }
