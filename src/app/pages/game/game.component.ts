@@ -36,10 +36,6 @@ export class GameComponent implements OnInit {
       new Box(2, 2, 'bottom-right-border-rounded')];
   }
 
-  isValidMove(x: number, y: number) {
-    return x >= 0 && x <= 2 && y >= 0 && y <= 2;
-  }
-
   registerMove(x: number, y: number) {
     const clickedBoxId = `${x}_${y}`;
     let box = this.boardBoxes.find(x => x.id === clickedBoxId);

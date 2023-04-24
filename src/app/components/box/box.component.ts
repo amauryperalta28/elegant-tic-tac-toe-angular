@@ -20,7 +20,10 @@ export class BoxComponent implements OnInit {
   }
 
   notifyBoxWasClicked(): void {
-    this.onBoxClick.emit(true);
+    if(this.content.length === 0){
+      this.onBoxClick.emit(true);
+
+    }
   }
 
 
